@@ -17,8 +17,10 @@ class CreateRepairsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->String('question')->comment('问题');
-            $table->integer('admin_id')->comment('维修人');
-            $table->timestamps('satisfaction')->comment('满意度');
+            $table->String('answer')->comment('回答');
+            $table->integer('administrator_id')->comment('维修人');
+            $table->integer('satisfaction')->comment('满意度');
+            $table->timestamps();
         });
     }
 
