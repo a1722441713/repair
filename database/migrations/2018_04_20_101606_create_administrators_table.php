@@ -16,6 +16,7 @@ class CreateAdministratorsTable extends Migration
         Schema::create('administrators', function (Blueprint $table) {
             $table->increments('id');
             $table->String('name');
+            $table->String('password');
             $table->integer('count')->default(0)->comment('维修数');
             $table->integer('praise')->default(0)->comment('好评');
             $table->integer('general')->default(0)->comment('一般');

@@ -15,34 +15,42 @@ class AdministratorsTableSeeder extends Seeder
             [
                 'id' => 1,
                 'name' => '彭益海',
+                'password' => Hash::make('E8net'),
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ],[
                 'id' => 2,
                 'name' => '刘锐',
+                'password' => Hash::make('E8net'),
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ],[
                 'id' => 3,
                 'name' => '李娜',
+                'password' => Hash::make('E8net'),
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ],[
                 'id' => 4,
                 'name' => '陶炜',
+                'password' => Hash::make('E8net'),
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ],[
                 'id' => 5,
                 'name' => '郝北平',
+                'password' => Hash::make('E8net'),
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ],[
                 'id' => 6,
                 'name' => '田阳',
+                'password' => Hash::make('E8net'),
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
-            ],[
+            ],
+            /*其他测试用户
+             * [
                 'id' => 7,
                 'name' => '雷建',
                 'created_at' => \Carbon\Carbon::now(),
@@ -167,7 +175,7 @@ class AdministratorsTableSeeder extends Seeder
                 'name' => '王锦',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
-            ]
+            ]*/
         ]);
 
     }
