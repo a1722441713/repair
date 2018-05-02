@@ -18,7 +18,8 @@ class WeChatController extends Controller
 
         $app = app('wechat.official_account');
         $app->server->push(function($message){
-            return url('user');
+           return route('index');
+
         });
 
         return $app->server->serve();

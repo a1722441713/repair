@@ -26,3 +26,7 @@ Route::middleware('wechat.oauth')->get('/user', 'WeiXinUsersController@GetWeiXin
 //    })->name('index');
 //});
 
+Route::get('/haha','WeiXinUsersController@GetJwcUser');
+
+Route::get('/image_code','WeiXinUsersController@GetImageCode');
+Route::get('/phone','WeiXinUsersController@phone');
