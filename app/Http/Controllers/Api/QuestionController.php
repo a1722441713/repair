@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class QuestionController extends Controller
 {
+    /**
+     * 电脑问题，要求输入问题，满意度，维修人
+     */
     public function question(Request $request){
 
         $data = $request->all();
@@ -31,8 +34,14 @@ class QuestionController extends Controller
             'administrator_id' => $administrator_id,
             'satisfaction' => $data['satisfaction']
         ]);
-        return redirect()->route();
+        //return redirect()->route();
     }
+
+
+    /**
+     * 维修人员回答问题 要求传入维修id ，输入回答
+     *
+     */
 
     //public function answer(Repair $repair,Request $request){
      public function answer($id,Request $request){
@@ -56,7 +65,6 @@ class QuestionController extends Controller
         }
         $administrator->save();
 
-    die;
-        return redirect()->route();
+        //return redirect()->route();
     }
 }
