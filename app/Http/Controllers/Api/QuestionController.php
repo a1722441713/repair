@@ -10,6 +10,7 @@ class QuestionController extends Controller
 {
     /**
      * 电脑问题，要求输入问题，满意度，维修人
+     * 目前用户写死
      */
     public function question(Request $request){
 
