@@ -13,6 +13,7 @@ class LoginJwcController extends Controller
     private $client;
     private $xm;
     private $jwc_mess;
+    private $user;
 
     //构造方法
     public function __construct()
@@ -29,6 +30,7 @@ class LoginJwcController extends Controller
     public function loginJwc(Request $request){
         $this->jwc_mess['student_number'] = e($request->get('student_number'));
         $this->jwc_mess['jwc_password'] = e($request->get('jwc_password'));
+        $this->user = User::find(e($request->get('id')));
         $code = $this->GetImageCode();
         $reponse = $this->client->get('/');
         $m = [];
@@ -58,10 +60,10 @@ class LoginJwcController extends Controller
                 $this->loginJwc($request);
             }
             if(preg_match('/密码不能为空/',$body)){
-                dd(2);
+                dd("密码不能为空");
             }
             if(preg_match('/密码错误/',$body)){
-                dd(3);
+                dd("密码错误");
             }
         }
         //dd($this->jwc_mess);
@@ -131,7 +133,7 @@ class LoginJwcController extends Controller
 
     //把获取得教务处信息生成到表中
     public function createJwcUser(){
-        User::create($this->jwc_mess);
+        $this->user->update($this->jwc_mess);
     }
 
     public function phone(){

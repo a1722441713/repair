@@ -26,7 +26,7 @@ class WeiXinUsersController extends Controller
         if($repair_user){
             //判断是否有教务处记录
             if($repair_user->name == null) {
-                // todo:教务处登记界面
+                // todo:教务处登记界面 (传id)
                 dd("教务处登记界面1");
             }else{
                 // todo:维修登记界面
@@ -43,6 +43,7 @@ class WeiXinUsersController extends Controller
         ];
         if(User::create($data)){
             // todo:教务处登陆界面，传递id
+            dd("教务处登记界面2");
         }
     }
 
